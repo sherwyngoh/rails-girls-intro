@@ -1,0 +1,60 @@
+.container.welcome
+  .row
+    .twelve.columns
+      h2
+        | Steps
+      h4
+        ol
+          li
+            a.to-show
+              | Create a project
+            .hidden
+              | Type in terminal: 
+              u rails new project_one && cd project_one && rails server
+          li 
+            a.to-show
+              | Receive a request 
+            .hidden 
+              | Type in 
+              u config/routes.rb
+              .type 
+                | get 
+                span.lightblue "/" 
+                | => 
+                span.lightblue "welcome#index"
+              
+          li 
+            a.to-show
+              | Direct a request
+
+            .hidden 
+              | Type in terminal: 
+              u touch app/controllers/welcome_controller.rb
+              br
+              | Type in 
+              span.file app/controllers/welcome_controller.rb
+              .type 
+                span.red def 
+                | index
+                .indent
+                span.red end
+
+
+          li 
+            a.to-show Display a page 
+            .hidden 
+              | Type in terminal: 
+              u touch app/views/welcome/index.html
+              br
+              | Type in 
+              span.file app/views/welcome/index.html
+              .type 
+                span.red= "<h1>"
+                |  Hello! 
+                span.red= "</h1>"
+
+          li 
+            | Go to your browser 
+            small= "(http://localhost:3000)"
+
+      h3= link_to "What next?", blog_path

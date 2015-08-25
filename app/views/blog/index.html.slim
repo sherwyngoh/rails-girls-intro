@@ -1,0 +1,30 @@
+.blog
+  .main
+    header        
+      h1 
+        | Your
+        = link_to blog_path do
+          i.fa.fa-sun-o.fa-spin
+        | Blog
+
+    .header-cover
+      i.fa.fa-sun-o
+      i.fa.fa-bars
+
+    .container
+      - (1..6).each do |num|
+        .item
+          = image_tag "item-#{num}.jpeg"
+          .caption
+            h3= @captions[num-1] 
+
+    footer
+      h2 
+        | Made with 
+        i.fa.fa-heart 
+        |  by Sherwyn.
+  .side
+    h4 Some Menu
+    h5 Option 1
+    h5 Option 2
+    
