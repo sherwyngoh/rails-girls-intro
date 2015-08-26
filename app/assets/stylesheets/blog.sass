@@ -1,7 +1,7 @@
-$header-height: 22em
-$header-height-mobile: 20%
+$header-height: 20em
+$header-height-mobile: 130px
 $color-primary: #ff4c4c
-$sidebar-width: 40%
+$sidebar-width: 50%
 $item-height: 450px
 
 .blog
@@ -9,26 +9,37 @@ $item-height: 450px
     position: absolute
     right: -$sidebar-width
     width: $sidebar-width
-    height: 95%
-    top: 5%
+    height: 100%
     text-align: center
     transform: translateX(0px)
     transition: transform 1s ease
+    background: whitesmoke
+    top: 0px
+    font-family: 'Raleway'
 
     &.active
       transform: translateX(-100%)
 
+    i.fa.fa-close
+      position: absolute
+      top: 1.2em
+      right: 1.2em
+      color: #222
+      font-size: 25px
+
     h5
       color: #222
-      background: white
-      transition: color 0.5s ease, background 0.5s ease
-      margin-bottom: 0px
-      padding: 20px auto
+      margin-bottom: 25px
+      letter-spacing: 3px
       &:hover
-        color: white
-        background: #222
         cursor: pointer
 
+    .search
+      color: grey
+      margin-top: 40px
+      i
+        margin-right: 20px
+        margin-left: -35px
 
   @media all and (max-width: 768px)
     .side
@@ -37,18 +48,29 @@ $item-height: 450px
 
   .main
     transition: transform 1s ease
-    transform: translateX(0px)
     &.active
       transform: translateX(-$sidebar-width)
 
-    @media all and (max-width: 768)
+    @media all and (max-width: 1000px)
       header
+        h1
+          font-size: 8em !important      
+          transform: translateY(40%)
+
+    @media all and (max-width: 768px)
+      header
+        min-height: $header-height-mobile !important
+        h1
+          font-size: 5em !important
+      .header-cover
         min-height: $header-height-mobile !important
         
     header
+      transition: all 0.5s ease
       min-height: $header-height
       z-index: 1
       opacity: 0.9
+      overflow: hidden
 
       h1
         font-size: 11.5em
@@ -62,52 +84,66 @@ $item-height: 450px
           margin-right: 10px
 
     .header-cover
+      transition: all 0.5s ease
       display: block
       width: 100%
       min-height: $header-height
-      background: rgba(0,0,0,0.25)
+      background-color: rgba(0,0,0,0.85)
       position: absolute
       top: 0px
       z-index: 2
+      transition: all 2s ease
+
       i
         position: absolute
         font-size: 2em
-        top: 2em
+        top: 1em
       
       i.fa.fa-bars
-        right: 2em
+        right: 1.2em
         color: white
 
       i.fa.fa-sun-o
         color: $color-primary
         position: absolute
-        left: 2em
+        left: 1.2em
 
     .container
       padding-top: 50px
       width: 85% !important
       max-width: none 
+      text-align: center
+
+      @media all and (max-width: 1000px)
+        .item
+          width: 95% !important
+          margin-right: 2.5% !important
+
+      @media all and (max-width: 768px)
+        .item
+          height: 350px !important
 
       .item
         overflow: hidden
         display: inline-block
-        width: 49.8%
+        width: 48%
         height: $item-height
         position: relative
+        margin-right: 1.5%
+        margin-bottom: 2%
 
         &:hover
           img
-            height: 90%
-            width: 90%
+            height: 107%
+            width: 107%
             transition: all 1.5s ease
         
         img
           z-index: 1
 
         img, .caption
-          width: 90%
-          height: 90%
-          margin-left: 5%
+          width: 100%
+          height: 100%
 
         .caption
           z-index: 2
@@ -123,20 +159,88 @@ $item-height: 450px
             cursor: pointer
 
           h3
+            font-family: "Open Sans"
+            color: rgba(0,0,0, 0.7)
             text-align: center
             letter-spacing: 3px
             line-height: $item-height
             font-size: 2em
-            font-family: sans-serif
+
+    @media all and (max-width: 768px)
+      .social
+        display: none
+
+    .social
+      transform: translateX(-100%)
+      position: fixed
+      z-index: 3
+      top: 45%
+      text-align: center
+      font-family: "Helvetica Neue"
+      transition: all 1s ease
+
+      p
+        height: 40px
+        width: 40px
+        font-size: 10px
+        margin-bottom: 0px
+        text-align: center
+        margin-left: 5px
+
+        &:first-of-type
+          line-height: 13px
+
+        b
+          font-size: 15px
+          display: block
+      
+      i
+        display: block
+        height: 40px
+        width: 50px
+        color: white
+        font-size: 24px
+        padding-top: 13px
+        transition: background-color 0.5s ease
+        p
+          font-size: 10px
+          letter-spacing: 0px
+
+        &.fa-facebook
+          background-color: #3b5998
+          &:hover
+            background-color: darken(#3b5998, 10%)
+
+        &.fa-twitter
+          background-color: #55acee
+          &:hover
+            background-color: darken(#55acee, 10%)
+
+        &.fa-linkedin
+          background-color: #0077b5
+          &:hover
+            background-color: darken(#0077b5, 10%)
+
+        &.fa-google-plus
+          background-color: #dd4b39
+          &:hover
+            background-color: darken(#dd4b39, 10%)
+
+        &.fa-envelope
+          padding-top: 10px
+          background-color: darken(whitesmoke, 15%)
+          &:hover
+            background-color: darken(whitesmoke, 5%)
 
     footer
       margin-top: 30px
       color: white
       height: 200px
       background: $color-primary
-      h2
+      h4
         line-height: 200px
         text-align: center
+        margin-bottom: 0px
 
   i
     transition: transform 0.3s ease
