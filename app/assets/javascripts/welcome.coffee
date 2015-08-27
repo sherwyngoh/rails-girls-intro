@@ -8,7 +8,8 @@ $ ->
 
   $(window).on 'load', ->
     yup = ->
+      $(".blog").fadeIn()
       $('.header-cover').css('background-color','rgba(0,0,0,0.25)')
       $('.social').css('transform', 'translateX(0px)')
 
-    setTimeout yup,  2000
+    setTimeout yup,  1500
