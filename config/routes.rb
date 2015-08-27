@@ -2,9 +2,9 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get '/blog'        => 'blog#index', as: :blog
-  get '/blog/first'  => 'blog#first', as: :blog_first
-  get '/blog/second' => 'blog#second', as: :blog_second
-  get '/blog/third'  => 'blog#third', as: :blog_third
+  get '/tags'        => 'blog#tags', as: :tags
+  get '/contact_form' => 'blog#contact_form', as: :contact_form
+  post '/contact' =>   'blog#contact', as: :contact
 
   get '/what'      => 'welcome#what',  as: :what
   get '/steps'      => 'welcome#steps',  as: :steps

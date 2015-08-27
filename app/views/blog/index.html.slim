@@ -4,11 +4,12 @@
       h1 
         | Your
         = link_to blog_path do
-          i.fa.fa-sun-o.fa-spin
+          i.fa.fa-sun-o
         | Blog
 
     .header-cover
-      i.fa.fa-sun-o
+      = link_to tags_path do
+        i.fa.fa-sun-o
       i.fa.fa-bars
 
     .container

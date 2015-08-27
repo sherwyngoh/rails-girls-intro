@@ -1,0 +1,10 @@
+.container.contact
+  .row
+    .box
+      h3 Contact Form
+      = simple_form_for :contact, url: contact_path do |f|
+        = f.input :name, input_html: {class: "u-full-width"}
+        = f.input :email, input_html: {class: "u-full-width"}
+        = f.input :message, input_html: {class: "u-full-width"}
+        
+        button.button-primary.u-full-width Contact me!

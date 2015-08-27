@@ -1,0 +1,39 @@
+.tags
+  header
+    .container
+      = "<header> HTML </header>"
+
+  .container
+    .row
+      .six.columns
+        h1= "<h1> </h1>"
+        h2= "<h2>  </h2>"
+        h3= "<h3>  </h3>"
+        h4= "<h4>  </h4>"
+        h5= "<h5>  </h5>"
+        p= "<p> </p>"
+        input type="text" placeholder="<input>"
+        br
+        button= "<button> </button>"
+
+      .six.columns
+        h3
+          div= "<div> </div>"
+          section= "<section> </section>"
+          span= "<span> </span>"
+
+        img src="http://placehold.it/350x150?text=<img+src=''/>"
+
+        h4
+          u= "<u> Underline </u>"
+          br
+          b= "<b> Bold </b>"
+          br
+          i= "<i> Italics </i>"
+          
+        = link_to contact_path do
+          i.fa.fa-arrow-right.fa-2x
+    br
+
+  footer 
+    .container= "<footer> </footer>"

@@ -11,13 +11,11 @@ class BlogController < ApplicationController
     ]
   end
 
-  def first
+  def contact
+    ContactMailer.contact(params[:contact]).deliver
+    redirect_to blog_path
   end
 
-  def second
+  def contact_form
   end
-
-  def third
-  end
-  
 end
