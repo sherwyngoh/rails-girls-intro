@@ -1,14 +1,7 @@
 class BlogController < ApplicationController
 
   def index
-    @captions = [
-      "The Swimmer",
-      "The Plant",
-      "That Night",
-      "The Meal",
-      "That Look",
-      "This Feel"
-    ]
+
   end
 
   def contact

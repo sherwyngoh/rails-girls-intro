@@ -13,11 +13,33 @@
       i.fa.fa-bars
 
     .container
-      - (1..6).each do |num|
-        .item
-          = image_tag asset_url("item-#{num}.jpeg")
-          .caption
-            h3= @captions[num-1] 
+      .item
+        = image_tag "item-1.jpeg"
+        .caption
+          h3= "The Swimmer"
+      .item
+        = image_tag "item-2.jpeg"
+        .caption
+          h3= "The Plant"
+      .item
+        = image_tag "item-3.jpeg"
+        .caption
+          h3= "That Night"
+      .item
+        = image_tag "item-4.jpeg"
+        .caption
+          h3= "The Meal"
+
+      .item
+        = image_tag "item-5.jpeg"
+        .caption
+          h3= "That Look"
+
+      .item
+        = image_tag "item-6.jpeg"
+        .caption
+          h3= "This Feel"
+
 
     .social
       p 
