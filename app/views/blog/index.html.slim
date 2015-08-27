@@ -15,7 +15,7 @@
     .container
       - (1..6).each do |num|
         .item
-          = image_tag "item-#{num}.jpeg"
+          = image_tag asset_path("item-#{num}.jpeg")
           .caption
             h3= @captions[num-1] 
 
