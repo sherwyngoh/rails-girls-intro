@@ -1,6 +1,7 @@
 $ ->
   $('.to-show').click ->
     $(this).parent().find('.hidden').fadeIn()
+    $(this).css('opacity', '1')
 
   $('.fa-bars, .fa-close').click ->
     $('.side,  .main').toggleClass('active')
