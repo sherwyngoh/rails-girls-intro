@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :entries
   root 'welcome#index'
 
   get '/blog'        => 'blog#index', as: :blog

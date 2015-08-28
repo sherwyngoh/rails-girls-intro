@@ -1,0 +1,17 @@
+.container.entries
+  h1 
+    | My Diary
+    = link_to new_entry_path do
+      i.fa.fa-plus
+  
+  -@entries.each do |entry|
+    section
+      = link_to entry, data: {:confirm => 'Are you sure?'}, :method => :delete do
+        i.fa.fa-close
+      h4
+        = "#{entry.title} - "
+      h5
+        small = "#{entry.tags}"
+      p #{entry.content}
+      p.created-at
+        i= "#{entry.created_at.strftime('%A, %b %d')}"

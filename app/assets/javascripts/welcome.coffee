@@ -12,3 +12,4 @@ $ ->
       $('.social').css('transform', 'translateX(0px)')
 
     setTimeout yup,  2000
+  
