@@ -10,6 +10,9 @@
         i.fa.fa-close
       h4
         = "#{entry.title} - "
+        small
+          = link_to edit_entry_path(entry) do
+            i.fa.fa-pencil
       h5
         small = "#{entry.tags}"
       p #{entry.content}
