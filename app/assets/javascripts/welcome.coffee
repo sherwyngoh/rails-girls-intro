@@ -9,7 +9,10 @@ $ ->
   $(window).on 'load', ->
     yup = ->
       $('.header-cover').css('background-color','rgba(0,0,0,0.25)')
+
+    andYup = ->
       $('.social').css('transform', 'translateX(0px)')
 
-    setTimeout yup,  2000
+    setTimeout yup,  2500
+    setTimeout andYup,  4000
   
