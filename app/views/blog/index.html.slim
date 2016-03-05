@@ -1,15 +1,11 @@
 .blog
   .main
     header        
-      h1 
-        | Your
-        = link_to blog_path do
-          i.fa.fa-sun-o
-        | Blog
+      = image_tag "bnb.jpeg"
 
     .header-cover
       = link_to contact_form_path do
-        i.fa.fa-sun-o.fa-spin
+        span airbnb
       i.fa.fa-bars
 
     .container
